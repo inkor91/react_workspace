@@ -1,0 +1,103 @@
+패스트캠퍼스 react 강의
+
+-React 
+
+-라이브러리 vs 프레임워크 
+- 라이브러리는 개발 편의를 위한 도구의 모음
+- 프레임워크는 기반 구조 까지 잡혀 있음 
+ex) 라이브러리는 공구, 프레임워크는 공장 
+
+많은 사람들에게 사랑받고 있다면 !== 기술적 근간이 좋다
+
+but 리액트는 기술적으로 확실한 장점이 있다. 
+Virtual DOM / JSX/ FLUX/ Functional Programming...
+
+새로운 기술을 배우는 시작점으로 좋다
+
+리액트를 풍성하게 해주는 라이브러들이 많고,
+새로운 좋은 라이브러리들이 계속 나오고 있다. 
+
+기술의 트렌드는 빠르게 변한다
+새로운 기술으 빠르게 익히는 능력이 중요하다. 
+
+공식문서를 토대로 익힌다.
+그 안의 패턴을 찾고 ,새로운 기술을 익히는 요령을 습득
+
+리앳트 맛보그(간단한 예제, 직접 따라치기)
+리액트 공식문서를 통해 중심을 잡기 
+다양한 라이브러리를 접하기
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+-JSX 
+문자도 HTML도 아닌 JavaScript의 확장 문법
+=> React.createElement 표현식
+
+-Babel 
+JavaScript Compier
+
+JSX 다루기 
+spread 연산자 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+*멀티 Element 생성하기
+-Fragment -> React.Fragment or <></>
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+*Element 찍어내기 
+
+-Function -> 재사용 가능한 Element
+--Custom Element -> Upper case
+Children 제한 -> 없음 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+*JS와 JSX 섞어쓰기 
+
+-Interpolation => 이미 HTML에서 쓰고 있었음 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+*리액트와 리랜더링 알아보기
+
+-바닐라 JS -> 변경으로 인해 Element를 다시 그림
+React -> 변경된 부분만 다시 그림
+
+-React 앨리먼트는 불변객체 (immutable)
+불변객체? 변하지 않는 객체
+ReactDOM.render(element,rootElement); 로 전달할뿐
+변경 판단 및 반영은 리액트가 알아서 한다. 
+
+-앨리먼트 타입이 바뀌면? 
+이전 엘리먼트는 버리고 새로 그린다. 
+앨리먼트 타입이 같다면?
+(key를 먼저 비교하고,)
+props를 비교해서 변경사항을 반영한다. 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+*이벤트핸들러
+
+-바닐라js
+addEventListener 
+on{event} onclick onmouseout onfocus onblur...
+
+-리액트
+on{Event}onClick,onMouseOut, onFocus, onBlur...
+
+-카멜케이스
+on{Event}onClick,onMouseOut, onFocus, onBlur
+
+-카멜케이스?
+기본문장 on on click 
+
+카멜 케이스 onClick 
+파스칼 케이스 OnClick 
+케밥 케이스 on-click 
+스네이크 케이스 on_click 
+
+바닐라 JS -> on{event}/ addEventListener
+React -> on{Event}
+
+Object.assing -> 객체 냉요복사
+전역변수변경-> ReactDOM.render
