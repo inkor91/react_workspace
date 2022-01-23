@@ -1,0 +1,96 @@
+조건부 렌더링
+
+if -> if(condition){return A} else {retrun B}
+&& -> condition && A, falsy 주의
+삼항연산자 -> condition ? A :B
+아예 안그리고 싶은 경우 -> return null;
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+List
+
+map -> 배열의 개별 요소를 순회
+defualt key -> 안주면 react는 index를 쓴다(위닝O)
+고유성 -> 형제 사이에서만 고유하면 됨
+key props -> key는 props로 넘어가지 않음
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Form 
+
+Controlled Component -> input의 value를 state로 관리
+다중 입력 -> event.target.name
+Uncontrolled Component -> form element 자체의 내부 상태 활용
+defaultValue, ref -> 기본값/ value 확인
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Hook
+
+Hook 사용 규칙
+- 최상위에서만 Hook을 호출해야함(반복문, 조건문, 중첩된 함수내에서 실행x)
+- Functional Component와 custom Hook 내에서만 호출해야함 
+
+Hooks 등장 -> Class의 단점 보완/ 재사용성 강화
+Hook 사용 규칙 -> 최상위/함수형 컴포넌트 / custom Hook
+Class의 state- > 훅을 먼저 배웠기에 고민 할 필요 x 
+
+Effect Hook
+데이터 가져오기
+구독 설정하기
+수동으로 리액트 컴포넌트의 DOM을 수정하기
+componentDidMount / componentDidUpdate / componentWiilUnmount
+
+componentDidMount + componentDidUpdate 
+useEffect(()=>{});
+
+구동과 정리
+componentDidMount & componentWillUnmount
+useEffect 하나에서 처리
+
+Effect가 업데이트 시마다 실행되는 이유?
+(Class 메서드가 관련없는 로직들은 모아놓고,
+관련이 있는 로직들은 여러개의 메서드로 나누어 놓는 경우가 있었다.)
+
+componentDidMount / componentDidUpdate / componentWillUnmount 
+
+이에 대한 해결책으로 표현을 하나로 합치고, 버그를 방지하기 위해..
+
+Effect를 건너뛰어 성능 최적화하기?
+
+특정 state의 변경에만 반응하게
+componentDidUpdate(prevProps, prevState){
+}
+
+dependency array
+
+*
+useEffect -> 데이터 fetch/ 구독/ Dom 수정
+clean up -> 구독과 구독해지를 한 공간에서
+dependency array -> 필요한 변경시에만 effect 실행
+
+Custom Hooks 
+컴포넌트들에 중복되는 Hook 로직을 묶어서 재사용 하도록 함
+Hook에서 Hook으로 정보 전달 가능
+useState: 이전 값을 인자로 /초기화 지연(함수)
+useEffect: 의존성 배열, 안주거나 / []/ [a,b]
+useLayoutEffect: useEffect와 유사 모든 DOM변경 후 브라우저가 화면을 
+그리기 이전 시점에 동기적으로 수행됨
+useReducer: useSate 대체 state/reducer/action
+useRef: current라는 상자. 내용의 변경은 알려주지 않음. 콜백 ref 사용
+Custom Hook -> 컴포넌트들에 반복되는 Hooks 묶기
+다양한 Hooks -> 필요한 타이밍에 참고해서 사용
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+Composition 
+
+Composition vs Inheritance
+컴포넌트에 다른 컴포넌트를 담기(children/custom)
+특수화
+
+Composition -> 컴포넌트에 컴포넌트 담기
+담는 방법 -> Children/Custom
+
+typeof -> type check
+확장성 -> 다양한 상황을 품을 수 있도록 
