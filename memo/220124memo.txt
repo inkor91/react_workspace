@@ -1,0 +1,79 @@
+HOC 
+
+HOC -> 함수를 받아서 함수를 리턴 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Memoization
+
+메모이제이션?
+메모이제이션은 컴퓨터 프로그램이 동일한 계산을 반복해야 할 떄, 
+이전에 계산한 값을 메모리에 저장함으로써 동일한 계산의 반복 수행을 
+제거하여 프로그램 실행 속도를 빠르게 하는 기술 
+
+React.memo
+동일한 props로 렌더링을 한다면, React.memo를 사용하여 성능 향상을 누릴 수 있다.
+memo를 사용하면 React는 컴포넌트를 렌더링하지 않고 마지막으로 렌더링한 결과를 재사용한다
+
+React.memo -> HOC/Props 비교하여 메모리
+Profiler -> 리액트 성능 분석 도구
+callback -> useCallback
+value-> useMemo
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Context
+컴포넌트 트리 제약 -> Props drilling의 한계 해소
+재사용성 -> Context를 사용하면 재사용하기 어려움
+API ->  createContext/ Provider/ Consumer
+useContext -> Consumer 대체
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Portals
+
+DOM 계층 구조 바깥에 있는 DOM 노드로 자식을 렌더링하는 최고의 방법
+
+createPortal -> 부모 컴포넌트 DOM 트리로부터 벗어나기
+이벤트 -> Portal에 있더라도 Event는 트리로 전파
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Render Props 
+
+재사용의 한 방법 (Composition/HOC/render props...)
+render props -> 무엇을 렌더링할 지 알려주는 함수
+render일 필요 -> 없음, children도 되고 뭐든 됨
+PureComponent -> props, state 비교하여 성능 쵲거화 
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+PropTypes
+
+Props의 타입을 확인하기 위한 도구
+(like, Flow, TypeScript같은 정적 타이핑 도구 )
+
+개발 모드에서만 동작 -> 유효하지 않은 prop에 대한 경고
+custom -> RegExp 등으로 사용자 정의 가능 
+children 제한 -> 원래 제약없던 갯수 제약 가능
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Reconcilation 
+
+UI 갱신에 대한 React의 접근법
+
+루트부터 비교-> 무엇을 렌디링 할 지 알려주는 함수
+트리를 비교 -> 부모가 바뀌었다면 트리를 버린다
+Keys -> 자식 재귀 처리 시 효율성 확보
+
+Virtual DOM
+가상의 표현을 메모리에 저장하고 실제 DOM과 동기화하는 과정==재조정
+
+Design Priciples
+리액트가 무엇을 하고 무엇을 하지 않는지에 대한 개발 철학
+리액트의 스케쥴링 업데이트(setState가 비동기적인 이유)
+
+VirtualDom -> 실제 DOM과 동기화 할 가상 표현
+재조정 -> 실제 DOM과 Virtual DOM의 동기화 
+React Fiber-> 스택 reconciler 대체한 재조정 엔진 

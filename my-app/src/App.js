@@ -1,5 +1,9 @@
 import './App.css';
-import ThankYouDialog from './components/3-6 Composition2/ThankYouDialog';
+//import Component from './components/3-14 PropTypes/Component';
+//import Example from './components/3-11 Portal/Example';
+//import Example from './components/3-10 Context/Example';
+//import Memo from './components/3-8Memoization/Memo';
+// import ThankYouDialog from './components/3-6 Composition2/ThankYouDialog';
 //import Dialog from './components/3-6 Composition2/Dialog';
 //import WelcomeDialog from './components/3-5Composition/WelcomeDialog';
 //import Reducer from './components/3-3 Hooks/Reducer';
@@ -18,7 +22,15 @@ import ThankYouDialog from './components/3-6 Composition2/ThankYouDialog';
 function App() {
   return (
     <div className="App">
-      <ThankYouDialog/>
+      {/* <Component/> */}
+      {/* <Example/> */}
+      {/* <Example/> */}
+      {/* <Memo/> */}
+      {/* <Input/>
+      <br/>
+      <br/>
+      <Button/> */}
+      {/* <ThankYouDialog/> */}
       {/* <Dialog/> */}
       {/* <Reducer/>
       <State/> */}
