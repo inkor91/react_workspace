@@ -1,4 +1,10 @@
 import './App.css';
+import StyledComponentExample from './components/StyledComponents/StyledComponentsExample';
+
+
+// import DayjsExample from './components/Dayjs/DayjsExample';
+// import MomentExample from './components/MomentExample';
+// import DateFnsExample from './components/DateFns/DateFnsExample';
 //import Component from './components/3-14 PropTypes/Component';
 //import Example from './components/3-11 Portal/Example';
 //import Example from './components/3-10 Context/Example';
@@ -22,6 +28,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <StyledComponentExample/>
+   
+   
+    {/* <DateFnsExample/>
+    <DayjsExample/>
+``  <MomentExample/> */}
       {/* <Component/> */}
       {/* <Example/> */}
       {/* <Example/> */}

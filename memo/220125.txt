@@ -1,0 +1,74 @@
+라이브러리
+>date/time
+
+moment 
+
+*moment 라이브러리
+
+터미널에서 npm install moment
+npm install moment-timezone
+
+*가이드
+- Mutability
+- Daylight saving time /Leap Years
+- Time zone/ Format/ Stric mode forgiving mode
+
+moment/locale/ko 를 import 해주면 한글사용
+
+but 오래됨 -> Mutable / Tree Shaking X
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+Dayjs
+
+npm install Dayjs
+
+*특징
+가볍다
+문서도 정갈
+간단한 기능들을 적용할 때
+필요한 기능이 추가로 있다면 다른 라이브러르 고려
+
+타임존-> plugin/timezone plugin/utc
+Format/비교 -> 원하는 스타일로 표기가능
+가벼움 -> Tree Shaking x
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+date-fns 
+
+커버리지가 제일 높은 라이브러리 
+
+사이즈
+커버리즈
+FP
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+styled- component 
+
+css의 문제점(React를 쓰면서)
+Global NameSpace: 글로벌 변수를 지양해야하는 JS와 대치
+Dependecits : css 간의 의존 관리
+Dead code Elimination : 안쓰는 css 인지 어려움
+Minification: 글래스 이름 최소화
+Sharing Constants: JS코드와 값을 공유하고 싶음
+Non-deterministic Resolution: css 파일 로드 이슈
+Isolation: 격리
+
+스타일드 컴포넌트(styled-components)
+Automatic critical CSS: 자동 style injects & 코드 스필릿
+No class name bugs: unique/ overlap x / misspellings
+Easier deletiion of Css : tied to a specific component
+Simple dynamic styling: props/ global theme
+Painless maintenace: styling affecting your component 
+Automatic vendor prefixing: current standard only 
+
+Css in JS -> css의 문제점을 해소
+해결책 -> 스타일을 style 태그로 분리
+사용법(Template literals) -> styled.{elemet}''
+styled(스타일드컴포넌트) -> 상속
+
+&-> 가상 엘리먼트/가상 선택자
+Global Style-> 전역 스타일
+attrs -> props addition 
+keyframes/ ThemeProvider-> Animation/ Theme
