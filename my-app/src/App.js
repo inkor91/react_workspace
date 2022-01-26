@@ -1,7 +1,8 @@
 import './App.css';
-import StyledComponentExample from './components/StyledComponents/StyledComponentsExample';
-
-
+import TailwindExample from './components/Tailwind/TailwindExample';
+//import Example from './components/SaasExample/Example';
+//import EmotionExample from './components/EmotionExample.jax/EmotionExample';
+//import StyledComponentExample from './components/StyledComponents/StyledComponentsExample';
 // import DayjsExample from './components/Dayjs/DayjsExample';
 // import MomentExample from './components/MomentExample';
 // import DateFnsExample from './components/DateFns/DateFnsExample';
@@ -28,9 +29,10 @@ import StyledComponentExample from './components/StyledComponents/StyledComponen
 function App() {
   return (
     <div className="App">
-      <StyledComponentExample/>
-   
-   
+      <TailwindExample/>
+      {/* <Example/> */}
+      {/* <EmotionExample/> */}
+      {/* <StyledComponentExample/> */}
     {/* <DateFnsExample/>
     <DayjsExample/>
 ``  <MomentExample/> */}

@@ -1,0 +1,75 @@
+*emotion
+
+리액트용 @emotion/react
+/**@jsxImportSoruce @emotion/react*/
+
+css props: like style props
+auto vendor-prefix/ nested selectors/ media queires
+SSR with zero configuration 
+
+css Props 
+Object Styles : css={{fontSize:12}}
+String Styles : css={{css`font-size:12px`}}
+
+Style Components 
+styled-components 와 유사한 +@기능 제공
+
+Composing dynamic Styles
+as propsNewting components
+
+react에 특화-> @emotion/react
+css props-> jsx를 대체
+styled components -> styled-component+@
+composition -> css안에서 css사용
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+styled-components vs emotion
+
+두 라이브러리 처음에는 조금 달랐지만, 이제 거의 유사해짐
+emotion가 styled-components를 서포트하듯이 styled-components도 css를 서포트
+emotion smaller & faster라는 의견
+
+기능-> Fallbacks, & , Global, keyframes
+styled-compoentns -> 서로 점점 유사해짐
+trend -> emotion이 우세한 듯
+사이즈/속도 -> emotion이 우세한듯
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+SaaS
+
+npm install saas
+
+CSS을 확장하는 Preprocessing
+프로젝트가 커지고/ 복잡해질수록 관리가 힘들어짐
+Nesting/Mixinis/Inheritance...
+
+Variables: $abc:###; /$abc
+Nesing : a{b{c{}}}
+Modules: _Abc.scss /@use'abc';abc.###
+Mixins:@mixin abc($type:x){} /@include abc; @include abc(z);
+Extend/Inheritance: %abc{} / @extend %abc
+Operators: + - * / %
+
+전처리기 -> css의 확장
+Sass/Scss -> 보다 Css와 유사한 Scss
+사용 -> variables/ modules / mixin / extend
+
+syntax -> 언어처럼 자체 syntax가 있음
+Interpolation -> #{} 값을 주입(마치 `${}`)
+values/function -> 프로그래밍 언어스러움
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+Tailwind Css와
+API for desgin system 
+
+컴포넌트 -> 자체를 제공하진 않음(유료)
+class-> 스타일 요소를 모두 줌
+Tiny -> 빌드할 때는 사용하는 class만
+Intell Sense-> VS code extension 제공
+
+Utility First-> 클래스 이름 생성 x/ css추가
+다크모드 -> 대응 용이(media/class)
+Cutomize -> configuration 차원에서 
+대부분의 css -> 커버함
